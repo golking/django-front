@@ -4,9 +4,8 @@ from datetime import datetime
 
 from django.shortcuts import render
 
-from vacancy.service import *
-from models import *
-from vacancy.api import ApiHeadHunter
+from .models import *
+from .api import HH
 
 
 def home_page(request):
