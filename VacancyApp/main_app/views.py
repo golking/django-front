@@ -10,21 +10,21 @@ from vacancy.api import ApiHeadHunter
 
 
 def home_page(request):
-    return render(request, 'HomePage.html',
+    return render(request, 'index.html',
                   {'context': Main.objects.all()})
 
 
 def demand_page(request):
-    return render(request, 'base.html', {'context': Info.objects.all()})
+    return render(request, 'info.html', {'context': Info.objects.all()})
 
 
 def geography_page(request):
-    return render(request, 'Geography.html',
+    return render(request, 'location.html',
                   {'context': Location.objects.all()})
 
 
 def skills_page(request):
-    return render(request, 'Skills.html', {'context': Ability.objects.all()})
+    return render(request, 'abilityes.html', {'context': Ability.objects.all()})
 
 
 def last_vacancy_page(request):
@@ -35,4 +35,4 @@ def last_vacancy_page(request):
 
     context = {'vacs': vacs}
 
-    return render(request, 'LastVacancy.html', context)
+    return render(request, 'last_vacancy.html', context)
