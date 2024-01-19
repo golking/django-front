@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-программист</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+<header>
+    <div class="name">
+        <p style="margin-top: 50px">Frontend-программист</p>
+        <img class="logo" src="{% static 'images/logotip.png' %}">
+    </div>
+</header>
+<main>
+    <div class="body">
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><div><a href="/">Главная</a></div></li>
+                    <li><div><a href={% url 'demend' %}>Востребованность</a></div></li>
+                    <li><div><a href={% url 'geography' %}>География</a></div></li>
+                    <li><div style="background: #FDEE30; border-radius: 0px 15px 15px 0px;"><a href={% url 'skills' %}>Навыки</a></div></li>
+                    <li><div><a href={% url 'lastVacancy' %}>Последние вакансии</a></div></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="home_text" style="top: 200px">
+            <h1>Топ-20 навыков по годам</h1>
+            <div class="tables_skills">
+                <table border='1'>
+<tr><th>Год</th><th>JavaScript</th><th>Git</th><th>CSS</th><th>HTML5</th><th>HTML</th><th>CSS3</th><th>React</th><th>TypeScript</th><th>jQuery</th><th>AngularJS</th><th>Redux</th><th>Node.js</th><th>Bootstrap</th><th>Vue.js</th><th>Английский язык</th><th>Angular</th><th>Adobe Photoshop</th><th>Sass</th><th>PHP</th><th>Less</th></tr>
+<tr><td>2015</td><td>1122</td><td>381</td><td>725</td><td>977</td><td>897</td><td>715</td><td>14</td><td>2</td><td>727</td><td>244</td><td>0</td><td>73</td><td>402</td><td>0</td><td>20</td><td>2</td><td>273</td><td>96</td><td>187</td><td>151</td></tr>
+<tr><td>2016</td><td>3612</td><td>1425</td><td>2347</td><td>2902</td><td>2415</td><td>2632</td><td>183</td><td>35</td><td>2460</td><td>1129</td><td>81</td><td>290</td><td>1397</td><td>0</td><td>133</td><td>20</td><td>829</td><td>371</td><td>747</td><td>600</td></tr>
+<tr><td>2017</td><td>6432</td><td>2665</td><td>4118</td><td>4147</td><td>4062</td><td>3601</td><td>922</td><td>168</td><td>3500</td><td>1894</td><td>439</td><td>718</td><td>1724</td><td>150</td><td>372</td><td>94</td><td>1284</td><td>635</td><td>1069</td><td>871</td></tr>
+<tr><td>2018</td><td>9575</td><td>4122</td><td>5877</td><td>5382</td><td>5641</td><td>4417</td><td>2182</td><td>495</td><td>3904</td><td>2710</td><td>1017</td><td>1440</td><td>2067</td><td>535</td><td>382</td><td>469</td><td>1260</td><td>783</td><td>1330</td><td>865</td></tr>
+<tr><td>2019</td><td>12046</td><td>5397</td><td>6981</td><td>6030</td><td>6348</td><td>4998</td><td>3786</td><td>1063</td><td>3542</td><td>2523</td><td>1475</td><td>1762</td><td>1877</td><td>947</td><td>783</td><td>857</td><td>1179</td><td>1186</td><td>1319</td><td>983</td></tr>
+<tr><td>2020</td><td>17595</td><td>9210</td><td>9321</td><td>8054</td><td>7790</td><td>6786</td><td>5865</td><td>2278</td><td>3763</td><td>3096</td><td>2200</td><td>2967</td><td>2058</td><td>1321</td><td>1618</td><td>1327</td><td>1361</td><td>1936</td><td>1421</td><td>2020</td></tr>
+<tr><td>2021</td><td>28786</td><td>16235</td><td>13405</td><td>12568</td><td>11360</td><td>10204</td><td>11389</td><td>7526</td><td>4235</td><td>3765</td><td>4480</td><td>4621</td><td>2496</td><td>3036</td><td>3986</td><td>3117</td><td>2343</td><td>2710</td><td>2098</td><td>2371</td></tr>
+<tr><td>2022</td><td>25654</td><td>15236</td><td>9583</td><td>9457</td><td>8668</td><td>7339</td><td>12042</td><td>11243</td><td>2662</td><td>2155</td><td>5274</td><td>3690</td><td>1643</td><td>4036</td><td>3773</td><td>3681</td><td>1996</td><td>2235</td><td>1762</td><td>1390</td></tr>
+<tr><td>2023</td><td>14046</td><td>7634</td><td>5742</td><td>4786</td><td>5714</td><td>3911</td><td>7706</td><td>7923</td><td>1245</td><td>1212</td><td>3043</td><td>2163</td><td>924</td><td>3066</td><td>1122</td><td>2404</td><td>1308</td><td>1259</td><td>1120</td><td>669</td></tr>
+</table>
+            </div>
+            <img class="skills_graph" src={% static "images/skills_graph.png" %}/>
+            <div class="empty_skills"></div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>Глушков Максим Евгеньевич АТ-30</p>
+</footer>
+</body>
+</html>
