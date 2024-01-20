@@ -29,13 +29,13 @@
         </div>
         <div class="home_text" style="top: 200px">
             {% for data in context %}
-                <h1>{{ data.table_name }}</h1>
-                <div class="tables_skills">
-                    {{ data.table|safe }}
-                </div>
-                <img class="skills_graph" src={{ data.graph_skills.url }}/>
-                <div class="empty_skills"></div>
-            {% endfor %}
+            <h1>{{ data.table_name }}</h1>
+            <div class="tables_skills">
+                {{ data.table|safe }}
+            </div>
+            <img class="skills_graph" src={{ data.graph_skills.url }}/>
+            <div class="empty_skills"></div>
+        {% endfor %}
         </div>
     </div>
 </main>
