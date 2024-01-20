@@ -19,18 +19,33 @@
         <div class="navigation">
             <nav>
                 <ul>
-                    <li><div style="background: #FDEE30; border-radius: 0px 15px 15px 0px;"><a href="/">Главная</a></div></li>
-                    <li><div><a href={% url 'relevance' %}>Востребованность</a></div></li>
-                    <li><div><a href={% url 'location' %}>География</a></div></li>
-                    <li><div><a href={% url 'abilities' %}>Навыки</a></div></li>
-                    <li><div><a href={% url 'hh' %}>Последние вакансии</a></div></li>
+                    <li>
+                        <div style="background: #FDEE30; border-radius: 0px 15px 15px 0px;"><a href="/">Главная</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'relevance' %}>Востребованность</a></div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'location' %}>География</a></div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'abilities' %}>Навыки</a></div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'hh' %}>Последние вакансии</a></div>
+                    </li>
                 </ul>
             </nav>
         </div>
         <div class="home_text">
-            
-            <div class="empty"></div>
-            <img class="home_img" src="{% static 'images/Frontend.jpg' %}"/>
+            {% for context in context %}
+                {{ context.content|safe }}
+
+
+                <div class="empty"></div>
+                <img class="home_img" src="{{ context.photo.url }}"/>
+            {% endfor %}
         </div>
     </div>
 </main>
