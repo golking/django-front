@@ -5,7 +5,7 @@ from datetime import datetime
 from django.shortcuts import render
 
 from .models import *
-from .api import HH
+from main_app.api.head_hunter.v1 import HeadHunter
 
 
 def home_page(request):
@@ -27,10 +27,8 @@ def skills_page(request):
 
 
 def last_vacancy_page(request):
-    for vacancy in last_vacancies:
-        name_vacancy_to_parse = vacancy.name_vacancy_to_parse
-    hh = ApiHeadHunter(name_vacancy_to_parse)
-    vacs = hh.get_data_vacancies(datetime.now().strftime('%Y-%m-%d'), 10)
+    hh = HeadHunter('frontend')
+    vacs = hh.get_data_vacancies('2024-01-15', 10)
 
     context = {'vacs': vacs}
 
