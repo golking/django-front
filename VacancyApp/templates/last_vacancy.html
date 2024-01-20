@@ -31,17 +31,31 @@
             <h1>Последние вакансии</h1>
             <div class="empty_skills"></div>
         </div>
-        <div class="LVtable" style="margin-left: 50px;">
-            {% for i in vacs %}
-            <h3>{{ i.name }}</h3>
-            <p>Описание: {{ i.description }}</p>
-            <p>Навыки: {{ i.key_skills }}</p>
-            <p>Компания: {{ i.employer }}</p>
-            <p>Зарплата: {{ i.salary }}</p>
-            <p>Город: {{ i.area }}</p>
-            <p>Дата публикации: {{ i.published_at }}</p>
-            <p>Ссылка: {{ i.alternate_url }}</p>
-        {% endfor %}
+        <div class="LVtable">
+            <table>
+                <tr>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Навыки</th>
+                    <th>Компания</th>
+                    <th>Зарплата</th>
+                    <th>Город</th>
+                    <th>Дата публикации</th>
+                    <th>Ссылка</th>
+                </tr>
+                {% for i in vacs %}
+                <tr>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.description }}</td>
+                    <td>{{ i.key_skills }}</td>
+                    <td>{{ i.employer }}</td>
+                    <td>{{ i.salary }}</td>
+                    <td>{{ i.area }}</td>
+                    <td>{{ i.published_at }}</td>
+                    <td>{{ i.alternate_url }}</td>
+                </tr>
+                {% endfor %}
+            </table>
         </div>
     </div>
 </main>
@@ -49,4 +63,22 @@
     <p>Глушков Максим Евгеньевич АТ-30</p>
 </footer>
 </body>
+<style>
+    .LVtable {
+        margin-left: 50px;
+        border-collapse: collapse;
+        width: 80%;
+    }
+
+    .LVtable th, .LVtable td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .LVtable th {
+        background-color: #FFB600;
+        color: #0049FF;
+    }
+</style>
 </html>
