@@ -19,21 +19,33 @@
         <div class="navigation">
             <nav>
                 <ul>
-                    <li><div><a href="/">Главная</a></div></li>
-                    <li><div><a href={% url 'relevance' %}>Востребованность</a></div></li>
-                    <li><div style="background: #FDEE30; border-radius: 0px 15px 15px 0px;"><a href={% url 'location' %}>География</a></div></li>
-                    <li><div><a href={% url 'abilities' %}>Навыки</a></div></li>
-                    <li><div><a href={% url 'hh' %}>Последние вакансии</a></div></li>
+                    <li>
+                        <div><a href="/">Главная</a></div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'relevance' %}>Востребованность</a></div>
+                    </li>
+                    <li>
+                        <div style="background: #FDEE30; border-radius: 0px 15px 15px 0px;"><a
+                                href={% url 'location' %}>География</a></div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'abilities' %}>Навыки</a></div>
+                    </li>
+                    <li>
+                        <div><a href={% url 'hh' %}>Последние вакансии</a></div>
+                    </li>
                 </ul>
             </nav>
         </div>
         <div class="home_text" style="top: 200px">
-            <img class="geography_graph" src="{% static 'images/4.png' %}"/>
-            <img style="margin-top: 300px" class="geography_graph" src="{% static 'images/3.png' %}"/>
-            <div class="tables">
-               
-            </div>
-            <h4 class="graph_title1">Уровень зарплат по городам</h4>
+            {% for data in context %}
+                <img class="demand_graph_1" src="{{ data.graph_salary_level_by_city.url }}"/>
+                <img class="demand_graph_2" src="{{ data.graph_vacancy_fraction_by_city.url }}"/>
+                <div class="tables">
+                    {{ data.table|safe }}
+                </div>
+            {% endfor %}
         </div>
     </div>
 </main>

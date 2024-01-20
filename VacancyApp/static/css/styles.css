@@ -197,7 +197,7 @@ background: rgba(253, 238, 48, 0.50);
     width: 350px;
     height: 250px;
     right: 1%;
-    top: 575px;
+    top: 950px;
 }
 
  .empty {
@@ -228,7 +228,7 @@ background: rgba(253, 238, 48, 0.50);
     justify-content: flex-start;
     position: absolute;
     left: 500px;
-    top: 50px
+    top: 20px
 }
 
 .tables table {
