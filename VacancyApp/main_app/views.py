@@ -1,6 +1,6 @@
 import re
 import requests
-from datetime import datetime
+import datetime
 
 from django.shortcuts import render
 
@@ -28,7 +28,8 @@ def skills_page(request):
 
 def last_vacancy_page(request):
     hh = HeadHunter('frontend')
-    vacs = hh.get_data_vacancies('2024-01-15', 10)
+    date = datetime.date.today()
+    vacs = hh.get_data_vacancies('2024-01-20', 10)
 
     context = {'vacs': vacs}
 

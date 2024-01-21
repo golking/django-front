@@ -11,8 +11,8 @@ html, body {
 
 header {
     position: absolute;
-    width: 50%;
-    margin-left: 25%;
+    width: 65%;
+    margin-left: 20%;
     height: 150px;
     background: transparent;
     z-index: 2;
@@ -25,9 +25,10 @@ header {
 }
 
 footer {
+    background: black;
     left: 32.5%;
     position: fixed;
-    width: 35%;
+    width: 40%;
     height: 60px;
     bottom: 0;
     border-radius: 50px 50px 0px 0px;
@@ -69,7 +70,6 @@ a {
     height: 60px;
     left: 550px;
     top: 35px;
-
     font-family: 'Ubuntu-Regular';
     font-style: normal;
     font-weight: 700;
@@ -193,19 +193,17 @@ background: rgba(253, 238, 48, 0.50);
 }
 
 .home_img {
-    position:absolute;
-    width: 350px;
-    height: 250px;
-    right: 1%;
-    top: 950px;
+    margin-left: 15%;
+    width: 700px;
+    height: 400px;
 }
 
- .empty {
-     height: 60px;
+.empty {
+     height: 100px;
  }
 
 .demand_graph_1 {
-    width: 400px;
+    width: 570px;
     height: 300px;
     position: absolute;
     left: 20px;
@@ -213,7 +211,7 @@ background: rgba(253, 238, 48, 0.50);
 }
 
 .demand_graph_2 {
-    width: 400px;
+    width: 570px;
     height: 300px;
     left: 20px;
     position: absolute;
@@ -227,7 +225,7 @@ background: rgba(253, 238, 48, 0.50);
 
     justify-content: flex-start;
     position: absolute;
-    left: 500px;
+    left: 600px;
     top: 20px
 }
 
@@ -281,14 +279,14 @@ background: rgba(253, 238, 48, 0.50);
 
 .skills_graph {
     position: absolute;
-    width: 400px;
-    height: 300px;
-    left: 400px;
+    width: 700px;
+    height: 430px;
+    left: 250px;
     top: 320px
 }
 
 .empty_skills {
-    height: 750px;
+    height: 900px;
 }
 
 .last_text {

@@ -29,7 +29,7 @@ class HeadHunter:
                 description = description[:100] + '...' if len(description) >= 100 else description
                 result_list.append({'name': resp['name'],
                                     'description': description,
-                                    'key_skills': ', '.join(map(lambda x: x['name'], resp['key_skills'])),
+                                    'key_skills': str(', '.join(map(lambda x: x['name'], resp['key_skills']))),
                                     'employer': resp['employer']['name'],
                                     'salary': f"{resp['salary']['from'] or ''} - {resp['salary']['to'] or ''} {resp['salary']['currency']}",
                                     'area': resp['area']['name'],

@@ -41,13 +41,12 @@
         <div class="home_text">
             {% for context in context %}
                 {{ context.content|safe }}
-
-
-                <div class="empty"></div>
                 <img class="home_img" src="{{ context.photo.url }}"/>
+                <div class="empty"></div>
             {% endfor %}
         </div>
     </div>
+
 </main>
 <footer>
     <p>Глушков Максим Евгеньевич АТ-30</p>
