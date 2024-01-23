@@ -29,7 +29,7 @@ def skills_page(request):
 def last_vacancy_page(request):
     hh = HeadHunter('frontend')
     date = datetime.date.today()
-    vacs = hh.get_data_vacancies('2024-01-20', 10)
+    vacs = hh.get_data_vacancies(date, 10)
 
     context = {'vacs': vacs}
 
